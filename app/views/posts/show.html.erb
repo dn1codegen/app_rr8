@@ -4,6 +4,12 @@
   </div>
 <% end %>
 
+<% if @post.image.attached? %>
+  <div class="post-image-full">
+    <%= image_tag @post.image, class: "post-show-image" %>
+  </div>
+<% end %>
+
 <%= render @post %>
 
 <div class="card-footer" style="margin-top: var(--spacing-lg);">

@@ -1,4 +1,9 @@
 <div id="<%= dom_id post %>" class="card">
+  <% if post.image.attached? %>
+    <div class="post-image">
+      <%= image_tag post.image, class: "post-card-image" %>
+    </div>
+  <% end %>
   <div class="card-header">
     <h2><%= post.title %></h2>
   </div>

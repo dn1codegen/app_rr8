@@ -17,6 +17,11 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :image, class: "form-label" %>
+    <%= form.file_field :image, accept: "image/*" %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :body, class: "form-label" %>
     <%= form.text_area :body, class: "form-input form-textarea #{'error' if post.errors[:body].any?}", placeholder: "Write your post content here..." %>
   </div>
