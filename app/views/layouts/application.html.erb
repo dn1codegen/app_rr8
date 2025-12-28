@@ -24,6 +24,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="header-content">
+        <%= link_to "App Rr8", root_path, class: "site-title" %>
+        <nav class="nav-links">
+          <%= link_to "Posts", posts_path, class: "nav-link #{'active' if current_page?(posts_path)}" %>
+          <%= link_to "New Post", new_post_path, class: "nav-link" %>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
